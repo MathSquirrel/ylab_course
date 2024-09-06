@@ -1,0 +1,190 @@
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("Poppins-Regular.ttf") format("truetype");
+}
+
+@keyframes start-night {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+:root {
+  --text-color: #f5f5f5;
+  --bg-color: rgba(255, 255, 255, 0.2);
+  --accent-color: #57a6a1;
+  --contrast-color: #240750;
+  --gray-color: #ccc;
+  --light-gray-color: #eee;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  min-width: 320px;
+  font-family: "Poppins-Regular", sans-serif;
+}
+
+.wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 20px auto 20px;
+  row-gap: 20px;
+  grid-template-columns: 100px auto 100px;
+  justify-content: center;
+  border: 50px solid black;
+  background-image: linear-gradient(0deg, #1b3f4e, #0f001d);
+  background-size: 100% 200%;
+  animation: start-night 10s ease-in-out forwards;
+}
+
+.card {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  align-self: center;
+  background-color: #e4e4e4;
+  width: 50vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  /* а надо ли justify-content? */
+  /* border-radius: 10px; */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.go-home {
+  align-self: flex-start;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+.go-home__link {
+  color: #333;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 40px;
+  position: relative;
+  margin-left: 52px;
+  display: block;
+  padding-left: 6px;
+}
+
+.go-home__link::before {
+  content: url("icons/go_back.svg");
+  position: absolute;
+
+  left: -52px;
+  top: 5px;
+}
+
+.auth-form {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.input {
+  outline: none;
+  border: 1px solid #333;
+  height: 40px;
+  font-size: 20px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.input:focus {
+  border: 1px solid rgb(32, 255, 218);
+  transition: 0.5s;
+}
+
+.password {
+  position: relative;
+  display: inline-block;
+}
+
+.button {
+  width: 100%;
+  color: #fff;
+  background-color: #333;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  font-style: normal;
+}
+
+.auth-form__label {
+  margin-bottom: 2px;
+  margin-left: 20px;
+  display: block;
+  color: #333;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.checkbox {
+  display: none;
+}
+.label-checkbox {
+  color: #333;
+  display: inline-block;
+  position: relative;
+  transition: 1s;
+}
+.label-checkbox:hover {
+  background-color: #3333331f;
+}
+
+.label-checkbox::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  border-bottom: 2px solid #333;
+  transition: 0.5s;
+
+}
+.checkbox:checked + .label-checkbox::after {
+  width: 100%;
+  
+}
+
+.auth-form__remember-forgot {
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth-form__link {
+  text-decoration: none;
+  color: #333;
+}
+
+.auth-form__register {
+  align-self: flex-end;
+  position: relative;
+  display: block;
+  margin-right: 52px;
+  padding-right: 6px;
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 10px;
+
+}
+
+.auth-form__register::after {
+  content: url("icons/go_for.svg");
+  position: absolute;
+  right: -52px;
+  top: 5px;
+  
+}

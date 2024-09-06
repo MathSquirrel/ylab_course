@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="/assets/normalize.css"> -->
+  <link rel="stylesheet" href="assets/style.css">
+  <title>authentication</title>
+</head>
+<body>
+  <div class="wrapper">
+    <section class="card">
+      <div class="go-home">
+        <a class="go-home__link" href="#">На главную</a>
+      </div>
+      <form action="/assets/index.js" class="auth-form" method="post">    
+        <div class="auth-form__login">
+          <label class="label auth-form__label" for="login">Логин / email</label>
+          <input class="input" type="text" id="login" name="login" required autofocus >
+        </div>
+        <div class="auth-form__password">
+          <label class="label auth-form__label" for="password">Пароль</label>
+          <input class="input" type="password" id="password" name="password" required minlength="6">
+        </div>
+        <div class="auth-form__remember-forgot">
+          <input type="checkbox" class="checkbox" id="remember" name="remember">
+          <label for="remember" class="label-checkbox" form="remember">Не запоминать</label>
+          <div class="auth-form__forgot">
+            <a class="auth-form__link" href="#">Забыл, что делать</a>
+          </div>
+        </div>
+        
+        <div class="auth-form__submit">
+          <button class="button" type="submit">Войти</button>
+        </div>
+        <div class="auth-form__register">
+            <a class="auth-form__link" href="#">На регистрацию</a>
+          
+          
+        </div>
+      </form>
+      
+    </section>
+  </div>
+  <!-- <script src="/assets/index.js"></script> -->
+</body>
+</html>уср
