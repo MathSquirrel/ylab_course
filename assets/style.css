@@ -136,6 +136,7 @@ body {
   padding: 0 10px;
   color: var(--text-color);
   transition: 1s;
+  letter-spacing: 0.1em;
 }
 
 .input:focus {
@@ -143,12 +144,6 @@ body {
   color: var(--accent-color);
 
 }
-
-.password {
-  position: relative;
-  display: inline-block;
-}
-
 
 .auth-form__remember-forgot {
   height: 40px;
@@ -254,5 +249,10 @@ body {
   top: 8px;
   right: 8px;
   border-radius: 50%;
+  background: url(icons/see_pw.svg) center no-repeat;
+  transition: 0.4s;
+}
+
+.auth-form__show-password.close {
   background: url(icons/unsee_pw.svg) center no-repeat;
 }
