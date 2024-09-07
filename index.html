@@ -8,33 +8,41 @@
 </head>
 <body>
   <div class="wrapper">
-    <section class="card">
-      <div class="go-home">
-        <a class="go-home__link" href="#">На главную</a>
+    <section class="card auth-card">
+      <div class="auth-card__home">
+        <a class="auth-card__link auth-card__go-back" href="#">На главную</a>
       </div>
-      <form action="/assets/index.js" class="auth-form" method="post">    
+      <form action="/assets/index.js" class="auth-card__form auth-form" method="post">    
         <div class="auth-form__login">
           <label class="label auth-form__label" for="login">Логин / email</label>
           <input class="input" type="text" id="login" name="login" required autofocus >
         </div>
         <div class="auth-form__password">
           <label class="label auth-form__label" for="password">Пароль</label>
-          <input class="input" type="password" id="password" name="password" required minlength="6">
+          <div class="auth-form__password-field">
+            <input class="input auth-form__password-input" type="password" id="password" name="password" required minlength="6">
+            <div class="auth-form__show-password"></div>
+          </div>
         </div>
         <div class="auth-form__remember-forgot">
-          <input type="checkbox" class="checkbox" id="remember" name="remember">
-          <label for="remember" class="label-checkbox" form="remember">Не запоминать</label>
+          <input type="checkbox" class="checkbox auth-form__remember" id="remember" name="remember">
+          <label for="remember" class="auth-form__remember-label label" form="remember">Не запоминать</label>
           <div class="auth-form__forgot">
-            <a class="auth-form__link" href="#">Забыл, что делать</a>
+            <a class="auth-form__link auth-form__forgot label" href="#">Забыл</a>
           </div>
         </div>
         
         <div class="auth-form__submit">
-          <button class="button" type="submit">Войти</button>
+          <button class="auth-form__button auth-form__button-sumbit" type="submit">Войти</button>
+          <div class="auth-form__networks">
+            <button class="auth-form__button auth-form__button-network">GitHub</button>
+          <button class="auth-form__button auth-form__button-network">Telegram</button>
+          </div>
+          
         </div>
       </form>
-      <div class="auth-form__register">
-        <a class="auth-form__link" href="#">На регистрацию</a>
+      <div class="auth-card__register">
+        <a class="auth-card__link auth-card__go-for" href="#">На регистрацию</a>
     </div>
       
     </section>
